@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OCPodLib_Example' do
+  pod 'OCPodLib', :path => '../'
+
+  target 'OCPodLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
