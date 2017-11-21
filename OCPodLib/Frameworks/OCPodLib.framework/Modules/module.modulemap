@@ -1,0 +1,6 @@
+framework module OCPodLib {
+  umbrella header "OCPodLib.h"
+
+  export *
+  module * { export * }
+}

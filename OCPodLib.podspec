@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'OCPodLib/Classes/**/*'
-  
+  s.source_files = 'OCPodLib/Classes/**/*.h'
+  s.vendored_frameworks = 'OCPodLib/Frameworks/OCPodLib.framework'
   # s.resource_bundles = {
   #   'OCPodLib' => ['OCPodLib/Assets/*.png']
   # }
