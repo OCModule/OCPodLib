@@ -36,8 +36,9 @@ TODO: Add long description of the pod here.
     else
         s.source_files = 'OCPodLib/Classes/**/*.h'
         s.vendored_frameworks = 'OCPodLib/Frameworks/OCPodLib.framework'
-        puts('echo 🌹 -- install with lib -- 🌹')
+        puts('echo 🌹 -- install with lib -- exc "source=1 pod install" or "OCPodLib=1 pod install" to install with source🌹')
     end
+    s.resources = 'OCPodLib/Assets/*.{xcassets}'
 
   # s.resource_bundles = {
   #   'OCPodLib' => ['OCPodLib/Assets/*.png']

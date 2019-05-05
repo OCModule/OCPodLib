@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "OCPClass.h"
 
 FOUNDATION_EXPORT double OCPodLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char OCPodLibVersionString[];

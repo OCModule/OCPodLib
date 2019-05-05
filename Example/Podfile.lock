@@ -1,16 +1,16 @@
 PODS:
-  - OCPodLib (0.1.0)
+  - OCPodLib (0.1.3)
 
 DEPENDENCIES:
   - OCPodLib (from `../`)
 
 EXTERNAL SOURCES:
   OCPodLib:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  OCPodLib: 6da1d2dcaa59be7b40aa875f15ca34316d87f145
+  OCPodLib: 5dd35021beec0d38a7d3eb00007716967100a5af
 
-PODFILE CHECKSUM: 48c1ddee4acd047b970a623e751dd577dfc31b6e
+PODFILE CHECKSUM: a8fc7492a01c0251cbd49f55685546df3bb2660f
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
