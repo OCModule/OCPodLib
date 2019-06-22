@@ -28,21 +28,23 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/OCModule/OCPodLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
     if ENV['source'] || ENV['OCPodLib']
-        s.source_files = 'OCPodLib/Classes/**/*'
+        s.source_files = 'OCPodLib/Classes/**/*.{h,m}'
+        s.preserve_paths = 'OCPodLib/lib'
+        s.ios.vendored_libraries = 'OCPodLib/lib/*'
         puts('echo 🌹-- install with source -- 🌹')
     else
         s.source_files = 'OCPodLib/Classes/**/*.h'
         s.vendored_frameworks = 'OCPodLib/Frameworks/OCPodLib.framework'
         puts('echo 🌹 -- install with lib -- exc "source=1 pod install" or "OCPodLib=1 pod install" to install with source🌹')
     end
-    s.resources = 'OCPodLib/Assets/*.{xcassets}'
+#    s.resources = ['OCPodLib/Assets/*.{xcassets}','OCPodLib/Classes/**/*.{xib}']
 
-  # s.resource_bundles = {
-  #   'OCPodLib' => ['OCPodLib/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'OCPodLib' => ['OCPodLib/Assets/*.png','OCPodLib/Assets/*.{xcassets}','OCPodLib/Classes/**/*.{xib}']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

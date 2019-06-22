@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "OCButton.h"
 #import "OCPClass.h"
 
 FOUNDATION_EXPORT double OCPodLibVersionNumber;

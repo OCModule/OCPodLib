@@ -16,8 +16,18 @@
     "tag": "0.1.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "OCPodLib/Classes/**/*",
-  "resources": "OCPodLib/Assets/*.{xcassets}"
+  "source_files": "OCPodLib/Classes/**/*.{h,m}",
+  "preserve_paths": "OCPodLib/lib",
+  "ios": {
+    "vendored_libraries": "OCPodLib/lib/*"
+  },
+  "resource_bundles": {
+    "OCPodLib": [
+      "OCPodLib/Assets/*.png",
+      "OCPodLib/Assets/*.{xcassets}",
+      "OCPodLib/Classes/**/*.{xib}"
+    ]
+  }
 }

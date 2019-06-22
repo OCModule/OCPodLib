@@ -1,11 +1,9 @@
-use_frameworks! # 注释后 pod 为动态库引用 Swift 不支持动态库
+#use_frameworks! # 注释后 pod 为动态库引用 Swift 不支持动态库
 
 target 'OCPodLib_Example' do
   pod 'OCPodLib', :path => '../'
 
   target 'OCPodLib_Tests' do
     inherit! :search_paths
-
-    
   end
 end

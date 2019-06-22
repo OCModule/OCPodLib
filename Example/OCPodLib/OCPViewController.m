@@ -7,11 +7,12 @@
 //
 
 #import "OCPViewController.h"
-#import <OCPodLib/OCPClass.h>
+#import <OCPodLib/OCButton.h>
+#import <OCPodLib/OCLIbViewController.h>
 
 @interface OCPViewController ()
 
-@property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) OCButton *backButton;
 
 @end
 
@@ -21,11 +22,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.backButton = [[UIButton alloc] initWithFrame:CGRectMake(60, 100, 60, 44)];
-//    [self.backButton setImage:[UIImage imageNamed:@"comic_home_back_icon"] forState:UIControlStateNormal];
-    UIImage *image = [UIImage imageNamed:@"comic_home_back_icon" inBundle:[NSBundle bundleForClass:[OCPClass class]] compatibleWithTraitCollection:nil];
-    [self.backButton setImage:image forState:UIControlStateNormal];
+    self.backButton = [[OCButton alloc] initWithFrame:CGRectMake(60, 100, 60, 44)];
     [self.view addSubview:self.backButton];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    OCLIbViewController *vc = [[OCLIbViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
