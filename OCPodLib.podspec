@@ -30,16 +30,16 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-    if ENV['source'] || ENV['OCPodLib']
+#    if ENV['source'] || ENV['OCPodLib']
         s.source_files = 'OCPodLib/Classes/**/*.{h,m}'
         s.preserve_paths = 'OCPodLib/lib'
-        s.ios.vendored_libraries = 'OCPodLib/lib/*'
+#        s.ios.vendored_libraries = 'OCPodLib/lib/*'
         puts('echo 🌹-- install with source -- 🌹')
-    else
-        s.source_files = 'OCPodLib/Classes/**/*.h'
-        s.vendored_frameworks = 'OCPodLib/Frameworks/OCPodLib.framework'
-        puts('echo 🌹 -- install with lib -- exc "source=1 pod install" or "OCPodLib=1 pod install" to install with source🌹')
-    end
+#    else
+#        s.source_files = 'OCPodLib/Classes/**/*.h'
+#        s.vendored_frameworks = 'OCPodLib/Frameworks/OCPodLib.framework'
+#        puts('echo 🌹 -- install with lib -- exc "source=1 pod install" or "OCPodLib=1 pod install" to install with source🌹')
+#    end
 #    s.resources = ['OCPodLib/Assets/*.{xcassets}','OCPodLib/Classes/**/*.{xib}']
 
    s.resource_bundles = {

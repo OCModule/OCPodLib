@@ -7,3 +7,19 @@ target 'OCPodLib_Example' do
     inherit! :search_paths
   end
 end
+# See: http://blog.makeex.com/2019/02/19/the-story-about-cocoapods-and-xcode-asset/
+post_install do |installer|
+    # 其中 #{Target Name} 为主工程输出目标名称
+    installer.aggregate_targets.each do |target|
+        if target.name.include?('OCPodLib-OCPodLib')
+            copy_pods_resources_path = "Pods/Target Support Files/Pods-#{target.name}/Pods-#{target.name}-resources.sh"
+            
+            str1 = 'printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0'
+            str2 = 'printf "%s\n" "${XCASSET_FILES[@]}" | sort -u | tr \'\n\' \'\\\\0\' | xargs -0 -s 20480 -n 100'
+            
+            text = File.read(copy_pods_resources_path)
+            new_contents = text.gsub(str1, str2)
+            File.open(copy_pods_resources_path, "w") {|file| file.puts new_contents }
+        end
+    end
+end

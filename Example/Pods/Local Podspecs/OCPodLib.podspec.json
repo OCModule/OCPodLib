@@ -20,9 +20,6 @@
   },
   "source_files": "OCPodLib/Classes/**/*.{h,m}",
   "preserve_paths": "OCPodLib/lib",
-  "ios": {
-    "vendored_libraries": "OCPodLib/lib/*"
-  },
   "resource_bundles": {
     "OCPodLib": [
       "OCPodLib/Assets/*.png",
