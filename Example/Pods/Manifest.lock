@@ -1,16 +1,22 @@
 PODS:
   - OCPodLib (0.1.3)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
 
 DEPENDENCIES:
-  - OCPodLib (from `../`)
+  - OCPodLib
+  - Realm
 
-EXTERNAL SOURCES:
-  OCPodLib:
-    :path: "../"
+SPEC REPOS:
+  trunk:
+    - OCPodLib
+    - Realm
 
 SPEC CHECKSUMS:
-  OCPodLib: 39a1d89e0b4f475b3bc64eaada9eaa5e9644a69a
+  OCPodLib: 33bbf8cd519c8554dc43188818816d342101b924
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
 
-PODFILE CHECKSUM: 569e90fea42ebfec5dbe192d9494679d0345ff90
+PODFILE CHECKSUM: 3c04c37bf11bd0a6154a4a650211d6308b280dee
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.9.1

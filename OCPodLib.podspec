@@ -29,8 +29,21 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
+#  s.header_mappings_dir = 'OCPodLib/Classes'
+#s.script_phases = [
+#  { :name => 'Copy Files', :script => 'echo "Hello World"' },
+#  { :name => 'Hello Ruby World', :script => 'puts "Hello World"', :shell_path => '/usr/bin/ruby' },
+#]
 
 #    if ENV['source'] || ENV['OCPodLib']
+        s.public_header_files = [
+            'OCPodLib/Classes/OCButton.h',
+            'OCPodLib/Classes/OCLIbViewController.h'
+        ]
+        s.private_header_files = [
+            'OCPodLib/Classes/OCPClass.h',
+            'OCPodLib/Classes/OCTestViewController.h'
+        ]
         s.source_files = 'OCPodLib/Classes/**/*.{h,m}'
         s.preserve_paths = 'OCPodLib/lib'
 #        s.ios.vendored_libraries = 'OCPodLib/lib/*'
